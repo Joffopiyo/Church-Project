@@ -10,6 +10,7 @@ import PrivateRoute from './components/PrivateRoute'
 import UserManagementPage from './pages/UserManagementPage'
 import ReportsPage from './pages/ReportsPage'
 import RoleDashboardView from './pages/RoleDashboardView'
+import SystemSettingsPage from './pages/SystemSettingsPage'
 import { ToastContainer } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
 
@@ -29,6 +30,7 @@ function App() {
                         <Route path='/admin/users' element={<PrivateRoute><UserManagementPage /></PrivateRoute>} />
                         <Route path='/reports' element={<PrivateRoute><ReportsPage /></PrivateRoute>} />
                         <Route path='/admin/role/:role' element={<PrivateRoute><RoleDashboardView /></PrivateRoute>} />
+                        <Route path='/admin/settings' element={<PrivateRoute><SystemSettingsPage /></PrivateRoute>} />
                     </Routes>
                 </div>
             </Router>
