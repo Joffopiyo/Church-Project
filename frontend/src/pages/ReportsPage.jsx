@@ -36,6 +36,11 @@ function ReportsPage() {
             navigate('/login');
             return;
         }
+        if (user.role !== 'ADMIN') {
+            toast.error('Access denied. Super Admin only.');
+            navigate('/dashboard');
+            return;
+        }
         fetchReports();
     }, [user, navigate]);
 
