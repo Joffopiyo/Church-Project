@@ -9,6 +9,7 @@ import SickRecordsManager from './components/SickRecordsManager'
 import PrivateRoute from './components/PrivateRoute'
 import UserManagementPage from './pages/UserManagementPage'
 import ReportsPage from './pages/ReportsPage'
+import RoleDashboardView from './pages/RoleDashboardView'
 import { ToastContainer } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
 
@@ -27,6 +28,7 @@ function App() {
                         <Route path='/sick-records' element={<PrivateRoute><SickRecordsManager /></PrivateRoute>} />
                         <Route path='/admin/users' element={<PrivateRoute><UserManagementPage /></PrivateRoute>} />
                         <Route path='/reports' element={<PrivateRoute><ReportsPage /></PrivateRoute>} />
+                        <Route path='/admin/role/:role' element={<PrivateRoute><RoleDashboardView /></PrivateRoute>} />
                     </Routes>
                 </div>
             </Router>

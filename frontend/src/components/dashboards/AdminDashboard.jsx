@@ -429,7 +429,7 @@ function AdminDashboard() {
                                 </Typography>
                                 <Chip label="Active" color="success" size="small" />
                             </Box>
-                            <Button variant="outlined" fullWidth sx={{ borderRadius: 2, textTransform: 'none', fontWeight: 600 }}>
+                            <Button variant="outlined" fullWidth sx={{ borderRadius: 2, textTransform: 'none', fontWeight: 600 }} onClick={() => window.location.href = '/admin/role/BISHOP'}>
                                 View Dashboard
                             </Button>
                         </CardContent>
@@ -459,7 +459,7 @@ function AdminDashboard() {
                                 </Typography>
                                 <Chip label="Active" color="success" size="small" />
                             </Box>
-                            <Button variant="outlined" fullWidth sx={{ borderRadius: 2, textTransform: 'none', fontWeight: 600 }}>
+                            <Button variant="outlined" fullWidth sx={{ borderRadius: 2, textTransform: 'none', fontWeight: 600 }} onClick={() => window.location.href = '/admin/role/REVEREND'}>
                                 View Dashboard
                             </Button>
                         </CardContent>
@@ -489,7 +489,7 @@ function AdminDashboard() {
                                 </Typography>
                                 <Chip label="Active" color="success" size="small" />
                             </Box>
-                            <Button variant="outlined" fullWidth sx={{ borderRadius: 2, textTransform: 'none', fontWeight: 600 }}>
+                            <Button variant="outlined" fullWidth sx={{ borderRadius: 2, textTransform: 'none', fontWeight: 600 }} onClick={() => window.location.href = '/admin/role/OVERSEER'}>
                                 View Dashboard
                             </Button>
                         </CardContent>
@@ -519,7 +519,7 @@ function AdminDashboard() {
                                 </Typography>
                                 <Chip label="Active" color="success" size="small" />
                             </Box>
-                            <Button variant="outlined" fullWidth sx={{ borderRadius: 2, textTransform: 'none', fontWeight: 600 }}>
+                            <Button variant="outlined" fullWidth sx={{ borderRadius: 2, textTransform: 'none', fontWeight: 600 }} onClick={() => window.location.href = '/admin/role/SENIOR_PASTOR'}>
                                 View Dashboard
                             </Button>
                         </CardContent>
@@ -549,7 +549,7 @@ function AdminDashboard() {
                                 </Typography>
                                 <Chip label="Active" color="success" size="small" />
                             </Box>
-                            <Button variant="outlined" fullWidth sx={{ borderRadius: 2, textTransform: 'none', fontWeight: 600 }}>
+                            <Button variant="outlined" fullWidth sx={{ borderRadius: 2, textTransform: 'none', fontWeight: 600 }} onClick={() => window.location.href = '/admin/role/DEPT_LEADER'}>
                                 View Dashboard
                             </Button>
                         </CardContent>
