@@ -71,23 +71,32 @@ function AdminDashboard() {
                 },
             };
 
-            const sickRecordsRes = await axios.get('http://localhost:5000/api/sick-records', config);
+            // Fetch users
+            const usersRes = await axios.get('/api/users', config);
+            const users = usersRes.data;
+
+            // Calculate users by role
+            const usersByRole = users.reduce((acc, user) => {
+                acc[user.role] = (acc[user.role] || 0) + 1;
+                return acc;
+            }, {});
+
+            // Fetch sick records
+            const sickRecordsRes = await axios.get('/api/sick-records', config);
             const sickRecords = sickRecordsRes.data;
             const criticalCases = sickRecords.filter(r => r.status === 'CRITICAL').length;
 
+            // Fetch reports
+            const reportsRes = await axios.get('/api/reports', config);
+            const reports = reportsRes.data;
+
             setStats({
-                totalUsers: 25, // Sample data
-                usersByRole: {
-                    BISHOP: 3,
-                    REVEREND: 5,
-                    OVERSEER: 7,
-                    SENIOR_PASTOR: 6,
-                    DEPT_LEADER: 4
-                },
+                totalUsers: users.length,
+                usersByRole,
                 totalSickRecords: sickRecords.length,
                 criticalCases,
-                totalReports: 12, // Sample data
-                totalDuties: 18 // Sample data
+                totalReports: reports.length,
+                totalDuties: 18 // Sample data - can be updated when duties API is ready
             });
 
             setLoading(false);

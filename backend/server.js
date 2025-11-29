@@ -36,6 +36,7 @@ const uploadRoutes = require('./routes/uploadRoutes');
 const reportRoutes = require('./routes/reportRoutes');
 const attendanceRoutes = require('./routes/attendanceRoutes');
 const sickRecordRoutes = require('./routes/sickRecordRoutes');
+const userRoutes = require('./routes/userRoutes');
 
 app.use('/api/auth', authRoutes);
 app.use('/api/departments', departmentRoutes);
@@ -45,6 +46,7 @@ app.use('/api/reports', reportRoutes);
 app.use('/api/attendance', attendanceRoutes);
 app.use('/api/sick-records', sickRecordRoutes);
 app.use('/api/files', require('./routes/fileRoutes'));
+app.use('/api/users', userRoutes);
 
 app.get('/', (req, res) => {
     res.send('API is running...');

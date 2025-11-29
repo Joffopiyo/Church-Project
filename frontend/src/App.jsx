@@ -7,6 +7,8 @@ import ResetPasswordPage from './pages/ResetPasswordPage'
 import RoleBasedDashboard from './components/RoleBasedDashboard'
 import SickRecordsManager from './components/SickRecordsManager'
 import PrivateRoute from './components/PrivateRoute'
+import UserManagementPage from './pages/UserManagementPage'
+import ReportsPage from './pages/ReportsPage'
 import { ToastContainer } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
 
@@ -23,6 +25,8 @@ function App() {
                         <Route path='/reset-password/:resetToken' element={<ResetPasswordPage />} />
                         <Route path='/dashboard' element={<PrivateRoute><Dashboard /></PrivateRoute>} />
                         <Route path='/sick-records' element={<PrivateRoute><SickRecordsManager /></PrivateRoute>} />
+                        <Route path='/admin/users' element={<PrivateRoute><UserManagementPage /></PrivateRoute>} />
+                        <Route path='/reports' element={<PrivateRoute><ReportsPage /></PrivateRoute>} />
                     </Routes>
                 </div>
             </Router>
