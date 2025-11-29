@@ -2,7 +2,17 @@ import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 import axios from 'axios';
 
 // Get user from localStorage
-const user = JSON.parse(localStorage.getItem('user'));
+// Get user from localStorage
+let user = null;
+try {
+    const storedUser = localStorage.getItem('user');
+    if (storedUser) {
+        user = JSON.parse(storedUser);
+    }
+} catch (error) {
+    console.error("Failed to parse user from localStorage:", error);
+    localStorage.removeItem('user');
+}
 
 const initialState = {
     user: user ? user : null,

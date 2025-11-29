@@ -21,7 +21,7 @@ import {
     TrendingUp as TrendingUpIcon,
     People as PeopleIcon,
     CheckCircle as CheckCircleIcon,
-    LocalChurch as LocalChurchIcon
+    Church as LocalChurchIcon
 } from '@mui/icons-material';
 import {
     BarChart,
